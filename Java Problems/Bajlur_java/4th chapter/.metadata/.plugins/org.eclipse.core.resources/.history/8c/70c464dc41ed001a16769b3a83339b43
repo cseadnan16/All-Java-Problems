@@ -1,0 +1,13 @@
+package sumOfserise;
+
+public class A {
+	public static void main (String[] args){
+		int i, n = 10;
+		float sum = 0.f;
+		for(i=1;i<=10;i++){
+			sum = sum + (i);
+			System.out.println("Summation value: "+sum);
+		}
+		//System.out.println("Summation value: "+sum);
+	}
+}

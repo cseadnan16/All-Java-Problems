@@ -1,0 +1,22 @@
+package super_keyword.practice;
+
+class A{
+	int x = 10;
+}
+class B extends A{
+	// x = 10; 
+	//ইনহেরিট করার কারনে  A ক্লাসের  x এর মান   B ক্লাসে অভাররিড হয়েছে, কিন্তু এইটা ইনভিজিবল 
+	//এই ইনভিজিবল মানকে ভিজিবল করতে  B ক্লাসে super কিওয়ার্ড ব্যবহার করা হয় 
+	
+	int x = 5;
+	void display(){
+		System.out.println("Output: "+super.x);
+	}
+}
+public class Testing_1 {
+	public static void main(String[] args){
+		B object;
+		object = new B();
+		object.display();
+	} 
+}

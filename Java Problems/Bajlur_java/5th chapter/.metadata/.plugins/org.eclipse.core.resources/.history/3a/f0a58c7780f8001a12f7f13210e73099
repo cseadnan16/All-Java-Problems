@@ -1,0 +1,37 @@
+package max_min;
+
+import java.util.Scanner;
+
+public class MaxMin {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the value of n: ");
+		int n = input.nextInt();
+		int[] array = new int[n];
+		for(int i:array){
+			i = input.nextInt();
+		}
+		int max = max(array);
+		int min = min(array);
+		System.out.println("Maximum value: "+max);
+		System.out.println("Minimum value: "+min);
+	}
+	public static int max(int[] array){
+		int i, max;
+		for(i=0;i<array.length;i++){
+			if(array[i]>array[i+1]){
+				max = array[i];
+			}else{
+				max = array[i+1];
+			}
+		}
+		return 0;
+	}
+		
+	public static int min(int[] array){
+		
+		return 0;
+	}
+
+}

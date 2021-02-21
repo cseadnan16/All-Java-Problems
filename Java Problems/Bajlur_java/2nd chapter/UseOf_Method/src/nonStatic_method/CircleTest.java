@@ -1,0 +1,22 @@
+package nonStatic_method;
+
+class Circle{
+	private int radius;
+	
+	Circle(int radius){
+		this.radius = radius;
+	}
+	
+	//using getter method
+	 double getArea(){
+		return radius * radius * Math.PI;
+	}
+}
+
+public class CircleTest {
+	public static void main(String[] args){
+		Circle object = new Circle(5);
+		//double area = object.getArea();
+		System.out.println("Area = "+object.getArea());
+	}	
+}

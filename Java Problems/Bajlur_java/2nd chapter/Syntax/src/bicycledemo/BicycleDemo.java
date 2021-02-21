@@ -1,0 +1,66 @@
+package bicycledemo;
+
+class Bicycle{
+	int cadence = 0; // Its called instance variable(nonStatic field) 
+	int speed = 0; // Its called instance variable(nonStatic field) 
+	int gear = 1; // Its called instance variable(nonStatic field) 
+	static int numGears = 6; // Its called Class variable(static field) 
+	
+	void changeCadence(int newValue){
+		cadence = newValue;
+	}
+	
+	void changeGear(int newValue){
+		gear = newValue;
+	}
+	
+	void speedUp(int increment){
+		speed = speed + increment;
+	}
+	
+	void applyBrakes(int decrement){
+		speed = speed - decrement;
+	}
+	
+	public int staticVariable(int value){
+		numGears = numGears + value; 
+		return numGears;
+	}
+	
+	
+	void printStates(){
+		System.out.println("cadence:"+cadence + " speed:"+speed + " gear:"+gear); 
+	}
+}
+
+public class BicycleDemo {
+	public static void main(String[] args) {
+		// Create two different
+		// Bicycle objects
+		
+		Bicycle bike1 = new Bicycle();
+		Bicycle bike2 = new Bicycle();
+		
+		// Call methods on those objects
+		bike1.changeCadence(50);
+		bike1.speedUp(10);
+		bike1.changeGear(2);
+		bike1.printStates();
+		
+		bike2.changeCadence(50);
+		bike2.speedUp(10);
+		bike2.changeGear(2);
+		
+		bike2.changeCadence(40);
+		bike2.speedUp(10);
+		bike2.changeGear(3);
+		bike2.printStates();
+		
+		bike1.staticVariable(14);
+		bike2.staticVariable(24);
+		bike2.staticVariable(6);
+		bike1.staticVariable(10);
+		System.out.println("\nStatic Variable: "+bike1.staticVariable(10));
+	}
+
+}

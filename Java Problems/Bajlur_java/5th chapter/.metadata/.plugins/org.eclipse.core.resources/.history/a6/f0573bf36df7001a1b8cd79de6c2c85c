@@ -1,0 +1,21 @@
+package arraySorting;
+
+public class Sorting_2 {
+
+	public static void main(String[] args) {
+		int[] Array = {2, 4, 99, 5, 0, 87, 1, 10};
+		System.out.print("Before unsorted list: ");
+		for(int i:Array){
+			System.out.print(i+" ");
+		}
+		
+		//Sorting_1.sortedFunc(Array);
+		
+		System.out.print("Sorted array : ");
+		for(int i:Array){
+			System.out.print(i+" ");
+		}
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package tryBlock;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Main2 {
+	public static void main(String[] args) {
+		private List<Integer> list;
+		private static final int SIZE = 10;
+		
+		public void writeList(){
+			PrintWriter out = null;
+			
+			try{
+				System.out.println("Entered try statement");
+				out  = new PrintWriter(new FileWriter("file.txt"));
+				for(int i; i<SIZE; i++){
+					Integer integer = list.get(i);
+					out.write(integer);
+				}
+			}catch(IOException e){
+				System.out.println("Here in catch Block");
+			}
+		}
+	}
+
+}

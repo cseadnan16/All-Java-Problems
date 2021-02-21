@@ -1,0 +1,61 @@
+package sumOfserise;
+
+import java.util.Scanner;
+
+class Calculator{
+	int add(int a, int b){
+		return a+b;
+	}
+	int subtract(int a, int b){
+		return a-b;
+	}
+	int multiplication(int a, int b){
+		return a*b;
+	}
+	int division(int a, int b){
+		return a/b;
+	}
+}
+
+public class C {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Calculator calculate = new Calculator();
+		int choice;
+		
+		do{
+			System.out.println("Please chose: ");
+			System.out.println("1 for addition: ");
+			System.out.println("2 for subtraction: ");
+			System.out.println("3 for multiplication: ");
+			System.out.println("4 for division: ");
+			System.out.println("0 for quit: ");
+			choice = input.nextInt();
+			
+			System.out.println("Enter the value of a: ");
+			int a = input.nextInt();
+			System.out.println("Enter the value of b: ");
+			int b = input.nextInt();
+			
+			switch(choice){
+			case 1:
+				int result = calculate.add(a, b);
+				System.out.println("Result: "+result);
+				break;
+			case 2:
+				result = calculate.subtract(a, b);
+				System.out.println("Result: "+result);
+				break;
+			case 3:
+				result = calculate.multiplication(a, b);
+				System.out.println("Result: "+result);
+				break;
+			case 4:
+				result = calculate.division(a, b);
+				System.out.println("Result: "+result);
+				break;
+			}
+				
+		}while(choice !=0);
+	}
+}

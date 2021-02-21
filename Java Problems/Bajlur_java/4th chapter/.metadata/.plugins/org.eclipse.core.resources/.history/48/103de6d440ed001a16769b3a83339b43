@@ -1,0 +1,13 @@
+package sumOfserise;
+
+public class A {
+	public static void main (String[] args){
+		int i, n = 1000;
+		float sum = 0.f;
+		for(i=1;i<=n;i++){
+			sum = sum + (1/i);
+			//System.out.println("Summation value: "+sum);
+		}
+		System.out.println("Summation value: "+sum);
+	}
+}

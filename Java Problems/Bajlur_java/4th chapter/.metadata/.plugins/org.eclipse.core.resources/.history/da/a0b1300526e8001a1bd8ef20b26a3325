@@ -1,0 +1,21 @@
+package doWhileLoop;
+
+import java.util.Scanner;
+public class UserInputExample {
+
+	public static void main(String[] args){
+		Scanner input = new Scanner (System.in);
+		boolean okay = true;
+		
+		do{
+			System.out.println("Enter a line: ");
+			String line = input.next();
+			System.out.println("You entered: " +line);
+			
+			if("quit".equals(line)){
+				okay = false;
+			}
+		}while(okay);
+		
+	}
+}
